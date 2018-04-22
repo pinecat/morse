@@ -179,7 +179,6 @@ void read_file(audiodata *audio, char *filename)
 {
     FILE *file = fopen(filename, "r"); // open the file
     if (file == NULL) { // if the file is null...
-        fclose(file); // close the file
         fprintf(stderr, "Could not open file: %s.\n", filename); // print msg to user
         exit(1); // quit the program
     }
@@ -207,7 +206,6 @@ void write_file(const audiodata *audio, char *filename)
 {
     FILE *file = fopen(filename, "w");
     if (file == NULL) { // if the file is null...
-        fclose(file); // close the file
         fprintf(stderr, "Could not save file: %s.\n", filename); // print msg to user
         exit(1); // quit the program
     }
