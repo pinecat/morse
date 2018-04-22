@@ -1,7 +1,7 @@
 all:	morse
 
 morse:	morse.c morse.h
-	gcc -ggdb -o morse morse.c -Wall
+	gcc -o morse morse.c
 
 clean:
 	rm -f *.o morse
