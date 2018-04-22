@@ -54,7 +54,7 @@ typedef struct _audiodata
 /* function prototypes */
 audiodata *create_file(char *morse, audiodata *dash, audiodata *dot);
 unsigned int get_new_size(char *morse, unsigned int dashSize, unsigned int dotSize);
-char *ascii_to_morse(char *phrase);
+char *ascii2morse(char *phrase);
 void read_file(audiodata *audio, char *filename);
 void write_file(const audiodata *audio, char *filename);
 void read_line(char *buffer);

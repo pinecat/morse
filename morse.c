@@ -21,7 +21,7 @@ int main()
     printf("Enter phrase: "); // ask for user input
     read_line(buffer); // read in user input
 
-    morse = ascii_to_morse(buffer); // convert user input to morse
+    morse = ascii2morse(buffer); // convert user input to morse
     printf("%s\n", morse); // print out the converted phrase as dashes and dots (morse code)
 
     audio = create_file(morse, dash, dot); // create the morse audio file
@@ -136,7 +136,7 @@ unsigned int get_new_size(char *morse, unsigned int dashSize, unsigned int dotSi
 
     returns:        *morse - a string in morse code
 */
-char *ascii_to_morse(char *phrase)
+char *ascii2morse(char *phrase)
 {
     // morsetable holds the morse values of each alphabetic ascii character, 'a' at index 0, 'z' at index 25
     char morsetable[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
